@@ -6,7 +6,7 @@ Run the app:
 dotnet run --project .\FlightBookingConsole\FlightBooking.Console.csproj
 ```
 
-The app waits for commands without printing a prompt.
+The app prints the available commands at startup and shows a `>` prompt before each command.
 
 ## Commands
 

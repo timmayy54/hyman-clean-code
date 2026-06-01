@@ -10,10 +10,12 @@ namespace FlightBookingProblem
         static void Main(string[] args)
         {
             SetupAirlineData();
+            PrintWelcomeMessage();
             
             string command = "";
             do
             {
+                PrintPrompt();
                 command = Console.ReadLine() ?? "";
                 var enteredText = command.ToLower();
                 if (enteredText.Contains("print summary"))
@@ -82,6 +84,27 @@ namespace FlightBookingProblem
                     Console.ResetColor();
                 }
             } while (command != "exit");
+        }
+
+        private static void PrintWelcomeMessage()
+        {
+            Console.WriteLine("Flight Booking Console");
+            Console.WriteLine();
+            Console.WriteLine("Available commands:");
+            Console.WriteLine("  add general NAME AGE");
+            Console.WriteLine("  add loyalty NAME AGE LOYALTY_POINTS USING_POINTS_TRUE_OR_FALSE");
+            Console.WriteLine("  add airline NAME AGE");
+            Console.WriteLine("  add discounted NAME AGE");
+            Console.WriteLine("  use default rules");
+            Console.WriteLine("  use relaxed rules");
+            Console.WriteLine("  print summary");
+            Console.WriteLine("  exit");
+            Console.WriteLine();
+        }
+
+        private static void PrintPrompt()
+        {
+            Console.Write("> ");
         }
 
         private static void SetupAirlineData()

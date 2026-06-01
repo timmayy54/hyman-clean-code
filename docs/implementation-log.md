@@ -17,3 +17,4 @@
 - Verified `dotnet build .\FlightBookingProblem.sln` succeeds with 0 warnings and 0 errors.
 - Verified `dotnet test .\FlightBookingProblem.sln` passes with 12 tests.
 - Smoke-tested the console app for discounted passengers, relaxed rules, and alternative aircraft.
+- Added startup help text and a command prompt to the console app.
